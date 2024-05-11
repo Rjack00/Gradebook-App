@@ -23,3 +23,17 @@ function getAverage(scores) {
       return "F";
     }
   }
+
+  // will return false if not true.
+  function hasPassingGrade(score) {
+    return getGrade(score) !== "F";
+  }
+
+  function studentMsg(totalScores, studentScore) {
+    if(getGrade(studentScore) !== "F"){
+      return "Class average: " + getAverage(totalScores) + ". Your grade: " + getGrade(studentScore) + ". You passed the course."
+    } else {
+      return "Class average: " + getAverage(totalScores) + ". Your grade: " + getGrade(studentScore)+ ". You failed the course."
+    }
+  }
+  console.log(studentMsg([92, 88, 12, 77, 57, 100, 67, 38, 97, 89], 37));
